@@ -23,7 +23,12 @@
     {
       "matches": [
         "http://www.nu.nl/*", 
-        "http://nl.msn.com/*"
+        "http://nl.msn.com/*",
+        "http://tweakers.net/*","http://*.tweakers.net/*",
+        "http://www.marktplaats.nl/*","http://*.marktplaats.nl/*",
+        "http://www.telegraaf.nl/*","http://*.telegraaf.nl/*",
+        "http://www.nrc.nl/*","http://*.nrc.nl/*",
+        "http://www.ad.nl/*","http://*.ad.nl/*"
       ],
       "js": ["js/jquery.min.js", "js/remove.js"]
     }
