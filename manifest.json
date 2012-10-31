@@ -14,22 +14,32 @@
               "128":  "images/icon128.png" },
 
   "browser_action": {
-    "default_icon": "images/icon19.png", // optional
-    "default_title": "Koekiemonster",      // optional; shown in tooltip
-    "default_popup": "popup.html"        // optional
+    "default_icon": "images/icon19.png", 
+    "default_title": "Koekiemonster",    
+    "default_popup": "popup.html"
   },
 
   "content_scripts": [
     {
       "matches": [
-        "http://www.nu.nl/*", 
-        "http://nl.msn.com/*",
-        "http://tweakers.net/*","http://*.tweakers.net/*",
-        "http://www.marktplaats.nl/*","http://*.marktplaats.nl/*",
-        "http://www.telegraaf.nl/*","http://*.telegraaf.nl/*",
+        // Sanoma
+        "http://www.nu.nl/*", "http://www.nusport.nl/*" , "http://www.nuzakelijk.nl/*", "http://www.nubijlage.nl/*", 
+        "http://www.nuentoen.nl/*", "http://www.nufoto.nl/*",  "http://www.nujij.nl/*",  "http://www.nulive.nl/*",  
+        "http://www.nutvgids.nl/*", "http://www.nuwerk.nl/*",
+
+        // TMG
+        "http://www.telegraaf.nl/*","http://*.telegraaf.nl/*", "http://*.dichtbij.nl/*", "http://*.spitsnieuws.nl/*", 
+        "http://*.jaap.nl/*", "http://*.autotekoop.nl/*", "http://*.metronieuws.nl/*", 
+
+        // Pergroep
         "http://www.nrc.nl/*","http://*.nrc.nl/*",
         "http://www.ad.nl/*","http://*.ad.nl/*",
         "http://www.volkskrant.nl/*","http://*.volkskrant.nl/*",
+
+        "http://nl.msn.com/*",
+        "http://tweakers.net/*","http://*.tweakers.net/*",
+        "http://www.marktplaats.nl/*","http://*.marktplaats.nl/*",
+
         "http://hyves.nl/*","http://*.hyves.nl/*"
       ],
       "js": ["js/jquery.min.js", "js/remove.js"]
@@ -37,7 +47,8 @@
   ],
    "web_accessible_resources": [
     "js/inject/hyves.js",
-    "js/inject/persgroep.js"
+    "js/inject/persgroep.js",
+    "js/inject/tmg.js"
   ]
 
   // Pick one (or none)

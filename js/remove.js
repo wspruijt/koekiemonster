@@ -3,8 +3,19 @@ $(function() {
   var url = document.URL
 
   // Nu.nl
-  if (url.indexOf("nu.nl") >= 0) {
-    $('span#sanoma-optin-close a').trigger('click');
+  if (url.indexOf("nu.nl") >= 0 || 
+      url.indexOf("nusport.nl") >= 0 ||
+      url.indexOf("nuzakelijk.nl") >= 0 ||
+      url.indexOf("nubijlage.nl") >= 0 ||
+      url.indexOf("nuentoen.nl") >= 0 ||
+      url.indexOf("nufoto.nl") >= 0 ||
+      url.indexOf("nujij.nl") >= 0 ||
+      url.indexOf("nulive.nl") >= 0 ||
+      url.indexOf("nutvgids.nl") >= 0 ||
+      url.indexOf("nuwerk.nl") >= 0
+      ) {
+
+        $('span#sanoma-optin-close a').click();
   }
 
   // Hyves
@@ -12,9 +23,15 @@ $(function() {
     injectJs("hyves.js");
   }
 
-  // Telegraaf
-  if (url.indexOf("telegraaf.nl") >= 0) {
-    setTimeout(function() { $('span#cookiepolicy-accept-cookies').trigger('click'); }, 500)
+  // TNG
+  if (url.indexOf("telegraaf.nl") >= 0 ||
+      url.indexOf("dichtbij.nl") >= 0 || 
+      url.indexOf("spitsnieuws.nl") >= 0 || 
+      url.indexOf("jaap.nl") >= 0 || 
+      url.indexOf("autotekoop.nl") >= 0 ||
+      url.indexOf("metronieuws.nl") >= 0
+      ) {
+        injectJs('tmg.js');
   }
 
   // Persgroep
