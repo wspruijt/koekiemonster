@@ -1,0 +1,1 @@
+$('div#cookiestatement a').last().click();
