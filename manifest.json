@@ -1,10 +1,8 @@
 {
-  // Required
   "name": "Koekiemonster",
   "version": "0.9",
   "manifest_version": 2,
 
-  // Recommended
   "description": "Verberg en accepteer alle meldingen over cookies op Nederlands meest bezochte sites.",
 
   "default_locale": "en",
@@ -19,28 +17,32 @@
     "default_popup": "popup.html"
   },
 
+   "background": {
+    "scripts": ["js/background.js"]
+  },
+
   "content_scripts": [
     {
       "matches": [
-        // Sanoma
         "http://www.nu.nl/*", "http://www.nusport.nl/*" , "http://www.nuzakelijk.nl/*", "http://www.nubijlage.nl/*", 
         "http://www.nuentoen.nl/*", "http://www.nufoto.nl/*",  "http://www.nujij.nl/*",  "http://www.nulive.nl/*",  
-        "http://www.nutvgids.nl/*", "http://www.nuwerk.nl/*",
+        "http://www.nutvgids.nl/*", "http://www.nuwerk.nl/*", "http://*.autoweek.nl/*", "http://*.viva.nl/*", 
+        "http://*.flaironline.nl/*", "http://*.autotrader.nl/*", "http://*.belegger.nl/*","http://*.fashionchick.nl/*",
+        "http://*.gamer.nl/*", "http://*.goeievraag.nl/*", "http://*.overzicht.nl/*", "http://*.schoolbank.nl/*", 
+        "http://*.kieskeurig.nl/*", "http://*.libelle.nl/*","http://*.startpagina.nl/*","http://*.pagina.nl/*",
+        "http://*.tvgids.nl/*",
 
-        // TMG
         "http://www.telegraaf.nl/*","http://*.telegraaf.nl/*", "http://*.dichtbij.nl/*", "http://*.spitsnieuws.nl/*", 
-        "http://*.jaap.nl/*", "http://*.autotekoop.nl/*", "http://*.metronieuws.nl/*", 
+        "http://*.jaap.nl/*", "http://*.autotekoop.nl/*", "http://*.metronieuws.nl/*", "http://*.speurders.nl/*", 
+        "http://*.denksport.nl/*", "http://hyves.nl/*","http://*.hyves.nl/*", "http://*.gaspedaal.nl/*", "http://*.scholieren.tv/*", 
 
-        // Pergroep
         "http://www.nrc.nl/*","http://*.nrc.nl/*",
         "http://www.ad.nl/*","http://*.ad.nl/*",
         "http://www.volkskrant.nl/*","http://*.volkskrant.nl/*",
 
         "http://nl.msn.com/*",
         "http://tweakers.net/*","http://*.tweakers.net/*",
-        "http://www.marktplaats.nl/*","http://*.marktplaats.nl/*",
-
-        "http://hyves.nl/*","http://*.hyves.nl/*"
+        "http://www.marktplaats.nl/*","http://*.marktplaats.nl/*"
       ],
       "js": ["js/jquery.min.js", "js/remove.js"]
     }
@@ -49,39 +51,9 @@
     "js/inject/hyves.js",
     "js/inject/persgroep.js",
     "js/inject/tmg.js"
+  ],
+
+  "permissions": [
+    "tabs"
   ]
-
-  // Pick one (or none)
-    /*
-  "browser_action": {...},
-  "page_action": {...},
-  "theme": {...},
-  "app": {...},
-  */
-
-  // Add any of these that you need
-  /*
-  "background": {"persistent": false, ...},
-  "background": {"persistent": true, ...},
-  "chrome_url_overrides": {...},
-  "content_scripts": [...],
-  "content_security_policy": "policyString",
-  "file_browser_handlers": [...],
-  "homepage_url": "http://path/to/homepage",
-  "incognito": "spanning" or "split",
-  "intents": {...}
-  "key": "publicKey",
-  "minimum_chrome_version": "versionString",
-
-  "nacl_modules": [...],
-  "offline_enabled": true,
-  "omnibox": { "keyword": "aString" },
-  "options_page": "aFile.html",
-  "permissions": [...],
-  "plugins": [...],
-  "requirements": {...},
-  "update_url": "http://path/to/updateInfo.xml",
-  "web_accessible_resources": [...],
-  "sandbox": [...]
-  */
 }

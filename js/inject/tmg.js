@@ -1,1 +1,1 @@
-$('span#cookiepolicy-accept-cookies').trigger('click');
+window.closeCookieBar();
