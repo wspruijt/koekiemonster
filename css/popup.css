@@ -1,0 +1,22 @@
+body {
+  font-family: "myriad-pro-1","myriad-pro-2",Helvetica,Arial,sans-serif;
+  font-size:15px;
+}
+
+body div#container {
+  width:100px;
+  text-align:center;
+}
+
+body div#container a {
+  border:0px;
+}
+
+body div#container img#logo {
+  padding:10px;
+}
+
+body div#container span#grey, span#opperhoofd {
+  color:#b8b8b8;
+  font-size:12px;
+}
