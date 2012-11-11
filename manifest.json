@@ -1,6 +1,6 @@
 {
   "name": "Koekiemonster",
-  "version": "0.91",
+  "version": "1.0",
   "manifest_version": 2,
 
   "description": "Verberg en accepteer alle meldingen over cookies op Nederlands meest bezochte sites.",
@@ -42,7 +42,9 @@
 
         "http://nl.msn.com/*",
         "http://tweakers.net/*","http://*.tweakers.net/*",
-        "http://www.marktplaats.nl/*","http://*.marktplaats.nl/*"
+        "http://www.marktplaats.nl/*","http://*.marktplaats.nl/*",
+
+        "http://www.rabobank.nl/*"
       ],
       "js": ["js/jquery.min.js", "js/remove.js"]
     }

@@ -87,6 +87,10 @@ $(function() {
     active = true;
   }
 
+  if (url.indexOf("rabobank.nl") >= 0) {
+      $('div.cookieBar a.close').click();
+  }
+  
   chrome.extension.sendMessage({active: active}, function(response) {});
 
 });
