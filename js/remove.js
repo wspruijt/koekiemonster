@@ -1,10 +1,10 @@
 $(function() {
- 
+
   var url = document.URL
-  var active = false; // Cookiemonster active? 
+  var active = false; // Cookiemonster active?
 
   // Sanoma
-  if (url.indexOf("nu.nl") >= 0 || 
+  if (url.indexOf("nu.nl") >= 0 ||
       url.indexOf("nusport.nl") >= 0 ||
       url.indexOf("nuzakelijk.nl") >= 0 ||
       url.indexOf("nubijlage.nl") >= 0 ||
@@ -21,18 +21,17 @@ $(function() {
       url.indexOf("autotrader.nl") >= 0 ||
       url.indexOf("belegger.nl") >= 0 ||
       url.indexOf("fashionchick.nl") >= 0 ||
-      url.indexOf("gamer.nl") >= 0 || 
+      url.indexOf("gamer.nl") >= 0 ||
       url.indexOf("goeievraag.nl") >= 0 ||
-      url.indexOf("overzicht.nl") >= 0 || 
-      url.indexOf("kieskeurig.nl") >= 0 || 
-      url.indexOf("schoolbank.nl") >= 0 || 
+      url.indexOf("overzicht.nl") >= 0 ||
+      url.indexOf("kieskeurig.nl") >= 0 ||
+      url.indexOf("schoolbank.nl") >= 0 ||
       url.indexOf("libelle.nl") >= 0 ||
       url.indexOf("startpagina.nl") >= 0 ||
-      url.indexOf("tvgids.nl") >= 0 
+      url.indexOf("tvgids.nl") >= 0
       ) {
 
-        $('span#sanoma-optin-close a').click(); // deprecated?
-        $('div#sanoma-optin-close a').click();
+        $('#sanoma-optin-close a').click();
 
         active = true;
   }
@@ -40,15 +39,15 @@ $(function() {
   // TMG
   if (url.indexOf("telegraaf.nl") >= 0 ||
       url.indexOf("hyves.nl") >= 0 ||
-      url.indexOf("dichtbij.nl") >= 0 || 
-      url.indexOf("spitsnieuws.nl") >= 0 || 
-      url.indexOf("jaap.nl") >= 0 || 
+      url.indexOf("dichtbij.nl") >= 0 ||
+      url.indexOf("spitsnieuws.nl") >= 0 ||
+      url.indexOf("jaap.nl") >= 0 ||
       url.indexOf("autotekoop.nl") >= 0 ||
       url.indexOf("metronieuws.nl") >= 0 ||
       url.indexOf("speurders.nl") >= 0 ||
       url.indexOf("denksport.nl") >= 0 ||
       url.indexOf("gaspedaal.nl") >= 0 ||
-      url.indexOf("scholieren.tv") >= 0 
+      url.indexOf("scholieren.tv") >= 0
       ) {
         injectJs('tmg.js');
         active = true;
@@ -66,10 +65,10 @@ $(function() {
     $('div.cookiemonster button').trigger('click'); // :)
     active = true;
   }
-  
+
   // MSN
   if (url.indexOf("nl.msn.com") >= 0) {
-    setTimeout(function(){ $('#cb1').hide(); }, 2000); 
+    setTimeout(function(){ $('#cb1').hide(); }, 2000);
     active = true;
   }
 
@@ -90,7 +89,20 @@ $(function() {
   if (url.indexOf("rabobank.nl") >= 0) {
       $('div.cookieBar a.close').click();
   }
-  
+
+  // iBood
+  if (url.indexOf("ibood.com") >= 0) {
+      //very old jQuery (1.2.6)
+      $('div.cookie_notice a.close')[0].click();
+      active = true;
+  }
+
+  // independer
+  if (url.indexOf("independer.nl") >= 0) {
+      $('.cookieUserAuthorisationBarContent .acceptBtn').click();
+      active = true;
+  }
+
   chrome.extension.sendMessage({active: active}, function(response) {});
 
 });

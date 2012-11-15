@@ -12,8 +12,8 @@
               "128":  "images/icon128.png" },
 
   "browser_action": {
-    "default_icon": "images/icon19.png", 
-    "default_title": "Koekiemonster",    
+    "default_icon": "images/icon19.png",
+    "default_title": "Koekiemonster",
     "default_popup": "popup.html"
   },
 
@@ -24,17 +24,17 @@
   "content_scripts": [
     {
       "matches": [
-        "http://www.nu.nl/*", "http://www.nusport.nl/*" , "http://www.nuzakelijk.nl/*", "http://www.nubijlage.nl/*", 
-        "http://www.nuentoen.nl/*", "http://www.nufoto.nl/*",  "http://www.nujij.nl/*",  "http://www.nulive.nl/*",  
-        "http://www.nutvgids.nl/*", "http://www.nuwerk.nl/*", "http://*.autoweek.nl/*", "http://*.viva.nl/*", 
+        "http://www.nu.nl/*", "http://www.nusport.nl/*" , "http://www.nuzakelijk.nl/*", "http://www.nubijlage.nl/*",
+        "http://www.nuentoen.nl/*", "http://www.nufoto.nl/*",  "http://www.nujij.nl/*",  "http://www.nulive.nl/*",
+        "http://www.nutvgids.nl/*", "http://www.nuwerk.nl/*", "http://*.autoweek.nl/*", "http://*.viva.nl/*",
         "http://*.flaironline.nl/*", "http://*.autotrader.nl/*", "http://*.belegger.nl/*","http://*.fashionchick.nl/*",
-        "http://*.gamer.nl/*", "http://*.goeievraag.nl/*", "http://*.overzicht.nl/*", "http://*.schoolbank.nl/*", 
+        "http://*.gamer.nl/*", "http://*.goeievraag.nl/*", "http://*.overzicht.nl/*", "http://*.schoolbank.nl/*",
         "http://*.kieskeurig.nl/*", "http://*.libelle.nl/*","http://*.startpagina.nl/*","http://*.pagina.nl/*",
         "http://*.tvgids.nl/*",
 
-        "http://www.telegraaf.nl/*","http://*.telegraaf.nl/*", "http://*.dichtbij.nl/*", "http://*.spitsnieuws.nl/*", 
-        "http://*.jaap.nl/*", "http://*.autotekoop.nl/*", "http://*.metronieuws.nl/*", "http://*.speurders.nl/*", 
-        "http://*.denksport.nl/*", "http://hyves.nl/*","http://*.hyves.nl/*", "http://*.gaspedaal.nl/*", "http://*.scholieren.tv/*", 
+        "http://www.telegraaf.nl/*","http://*.telegraaf.nl/*", "http://*.dichtbij.nl/*", "http://*.spitsnieuws.nl/*",
+        "http://*.jaap.nl/*", "http://*.autotekoop.nl/*", "http://*.metronieuws.nl/*", "http://*.speurders.nl/*",
+        "http://*.denksport.nl/*", "http://hyves.nl/*","http://*.hyves.nl/*", "http://*.gaspedaal.nl/*", "http://*.scholieren.tv/*",
 
         "http://www.nrc.nl/*","http://*.nrc.nl/*",
         "http://www.ad.nl/*","http://*.ad.nl/*",
@@ -44,7 +44,10 @@
         "http://tweakers.net/*","http://*.tweakers.net/*",
         "http://www.marktplaats.nl/*","http://*.marktplaats.nl/*",
 
-        "http://www.rabobank.nl/*"
+        "http://www.rabobank.nl/*",
+
+        "http://www.ibood.com/nl/*",
+        "http://www.independer.nl/*"
       ],
       "js": ["js/jquery.min.js", "js/remove.js"]
     }
