@@ -44,10 +44,20 @@
         "http://tweakers.net/*","http://*.tweakers.net/*",
         "http://www.marktplaats.nl/*","http://*.marktplaats.nl/*",
 
+        "http://www.rtl.nl/*",
+
+        "http://www.sbs6.nl/*",
+        "http://www.net5.nl/*",
+        "http://www.veronicatv.nl/*",
+        "http://www.veronicamagazine.nl/*",
+
+
         "http://www.rabobank.nl/*",
 
         "http://www.ibood.com/nl/*",
-        "http://www.independer.nl/*"
+        "http://www.independer.nl/*",
+        "http://www.bol.com/*",
+        "http://www.kijkshop.nl/*"
       ],
       "js": ["js/jquery.min.js", "js/remove.js"]
     }

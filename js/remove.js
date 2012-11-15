@@ -30,9 +30,7 @@ $(function() {
       url.indexOf("startpagina.nl") >= 0 ||
       url.indexOf("tvgids.nl") >= 0
       ) {
-
-        $('#sanoma-optin-close a').click();
-
+        document.querySelector('#sanoma-optin-close a').click();
         active = true;
   }
 
@@ -62,7 +60,7 @@ $(function() {
 
   // NCR
   if (url.indexOf("nrc.nl") >= 0) {
-    $('div.cookiemonster button').trigger('click'); // :)
+    document.querySelector('div.cookiemonster button').click();
     active = true;
   }
 
@@ -74,32 +72,59 @@ $(function() {
 
   // Tweakers
   if (url.indexOf("tweakers.net") >= 0) {
-    if($('div#cookieBar')) {
-      $('div#cookieBar input.fancyButton').trigger('click');
+    if(document.querySelector('div#cookieBar')) {
+      document.querySelector('div#cookieBar input.fancyButton').click();
     }
     active = true;
   }
 
   // Marktplaats
   if (url.indexOf("marktplaats.nl") >= 0) {
-    $('div#cookie-opt-in-button').trigger('click');
+    document.querySelector('div#cookie-opt-in-button').click();
     active = true;
   }
 
   if (url.indexOf("rabobank.nl") >= 0) {
-      $('div.cookieBar a.close').click();
+      document.querySelector('div.cookieBar a.close').click();
   }
 
   // iBood
   if (url.indexOf("ibood.com") >= 0) {
-      //very old jQuery (1.2.6)
-      $('div.cookie_notice a.close')[0].click();
+      document.querySelector('div.cookie_notice a.close').click();
       active = true;
   }
 
   // independer
   if (url.indexOf("independer.nl") >= 0) {
-      $('.cookieUserAuthorisationBarContent .acceptBtn').click();
+      document.querySelector('.cookieUserAuthorisationBarContent .acceptBtn').click();
+      active = true;
+  }
+
+  // bol.com
+  if (url.indexOf("bol.com") >= 0) {
+      document.querySelector('#top_header_cookie_message div.remove_link a').click();
+      active = true;
+  }
+
+  // RTL & Co.
+  if (url.indexOf("rtl.nl") >= 0) {
+      document.querySelector('#rtl_cookie_small_close').click();
+      active = true;
+  }
+
+  //Kijkshop
+  if (url.indexOf("kijkshop.nl") >= 0) {
+      document.querySelector('.cookie-opt-out-akkoord').click();
+      active = true;
+  }
+
+  //SBS6, Net5, Veronica, Veamer,
+  if (url.indexOf("sbs6.nl") >= 0 ||
+      url.indexOf("net5.nl") >= 0 ||
+      url.indexOf("veronicatv.nl") >= 0 ||
+      url.indexOf("veronicamagazine.nl") >= 0
+    ) {
+      document.querySelector('#sbs-optin-close a').click();
       active = true;
   }
 
