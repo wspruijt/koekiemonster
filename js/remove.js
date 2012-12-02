@@ -128,6 +128,22 @@ $(function() {
       active = true;
   }
 
+  //Ah.nl, webwinkel.ah.nl,webwinkel.etos.nl, webwinkel.gall.nl
+  if (url.indexOf("ah.nl") >= 0 ||
+      url.indexOf("webwinkel.ah.nl") >= 0 ||
+      url.indexOf("webwinkel.etos.nl") >= 0 ||
+      url.indexOf("webwinkel.gall.nl") >= 0
+    ) {
+      document.querySelector('#CookieInformerView a.closeMessage').click();
+      active = true;
+  }
+
+  //Anwb.nl
+  if (url.indexOf("anwb.nl") >= 0) {
+      document.querySelector('.cookiepolicy span.cookiebutton').click();
+      active = true;
+  }
+
   chrome.extension.sendMessage({active: active}, function(response) {});
 
 });
