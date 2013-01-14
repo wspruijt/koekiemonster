@@ -143,6 +143,13 @@ $(function() {
       document.querySelector('.cookiepolicy span.cookiebutton').click();
       active = true;
   }
+  
+  //Marketingfacts
+  if (url.indexOf("marketingfacts.nl") >= 0) {
+      document.querySelector('div.consent input[type="submit"]').click();
+      active = true;
+  }
+
 
   chrome.extension.sendMessage({active: active}, function(response) {});
 
