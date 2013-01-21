@@ -57,7 +57,8 @@
         "http://www.ibood.com/nl/*",
         "http://www.independer.nl/*",
         "http://www.bol.com/*",
-        "http://www.kijkshop.nl/*"
+        "http://www.kijkshop.nl/*",
+        "http://www.marketingfacts.nl/*"
       ],
       "js": ["js/jquery.min.js", "js/remove.js"]
     }
