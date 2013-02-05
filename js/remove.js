@@ -60,7 +60,7 @@ $(function() {
 
   // NCR
   if (url.indexOf("nrc.nl") >= 0) {
-    document.querySelector('div.cookiemonster button').click();
+    document.querySelector('div.cookieprompt button').click();
     active = true;
   }
 
