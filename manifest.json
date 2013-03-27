@@ -58,7 +58,8 @@
         "http://www.independer.nl/*",
         "http://www.bol.com/*",
         "http://www.kijkshop.nl/*",
-        "http://www.marketingfacts.nl/*"
+        "http://www.marketingfacts.nl/*",
+        "http://www.debijenkorf.nl/*"
       ],
       "js": ["js/jquery.min.js", "js/remove.js"]
     }
