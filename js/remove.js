@@ -143,10 +143,16 @@ $(function() {
       document.querySelector('.cookiepolicy span.cookiebutton').click();
       active = true;
   }
-  
+
   //Marketingfacts
   if (url.indexOf("marketingfacts.nl") >= 0) {
       document.querySelector('div.consent input[type="submit"]').click();
+      active = true;
+  }
+
+  //debijenkorf.nl
+  if (url.indexOf("debijenkorf.nl") >= 0) {
+      document.querySelector('div.cookietopbar-container a.closetext').click();
       active = true;
   }
 
